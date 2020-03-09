@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/img/kisspng-income-tax-accounting-computer-icons-business-income-5ac0fffba96261.7175947015225978836938.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700&display=swap" rel="stylesheet">
+    <title>Income Tax Calculator</title>
+</head>
+
+<body>
+
+    <section class="form-base">
+
+
+        <div class="form-input">
+            <h1>Yearly Income Tax Calculator</h1>
+            <h2>How many people are working in family?</h2>
+            <input type="radio" id="single" name="relation-status" value="single" onclick="singleCouple()">
+            <label for="single">I pay all bills by myself!</label><br>
+            <input type="radio" id="couple" name="relation-status" value="couple" onclick="singleCouple()">
+            <label for="couple">We share everything, even last piece of pizza:)</label><br>
+            <div class="input-container">
+                <div id="couple-income">
+                    <h3>First person yearly income</h3>
+                    <input type="number" id="couple-income-first" placeholder="First Income"><span>&euro;</span><br>
+                    <h3>Second person yearly income</h3>
+                    <input type="number" id="couple-income-second" placeholder="Second Income"><span>&euro;</span><br>
+                </div>
+                <div id="single-income">
+                    <h3>Your yearly income</h3>
+                    <input type="number" id="single-income-value" placeholder="Income"><span>&euro;</span><br>
+                </div>
+            </div>
+            <label for="tax-year">Choose year:</label>
+            <select id="tax-year">
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+            </select> <br>
+            <input type="button" id="calculate" value="CALCULATE" onclick="calculate()" /><br>
+        </div>
+        <div id="form-output">
+            <h2>Your income <br> tax is:</h2>
+            <h3 id="tax"></h3><span>&euro;</span>
+            <h2>Per Year.</h2>
+        </div>
+    </section>
+
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
